@@ -5,7 +5,7 @@ import { Paragraph } from "@/components/Paragraph";
 import { PostCard } from "@/components/PostCard";
 import { Heading2 } from "@/components/Heading";
 import { PostWrapper } from "@/components/PostWrapper";
-import { StyledImage } from "./page-styles";
+import { StyledImage } from "../page-styles";
 
 export const metadata: Metadata = {
   title: "Next.js blog app with styled components",
@@ -19,9 +19,7 @@ type PostData = {
   id: string;
 };
 
-export default function HomePage() {
-  const allPostsData: PostData[] = getSortedPostsData();
-
+export default function AboutPage() {
   return (
     <>
       <StyledImage
@@ -41,20 +39,6 @@ export default function HomePage() {
         This blog template is built using Next.js and is configured with support
         of styled-components and markdown for a blog post.
       </Paragraph>
-
-      {/* <div>
-        <Link href="/">View this project on github </Link>
-      </div> */}
-      <br />
-      <br />
-      <br />
-      <Heading2>Recent Blog Posts</Heading2>
-
-      {allPostsData.map((post) => (
-        <PostWrapper key={post.id}>
-          <PostCard {...post} />
-        </PostWrapper>
-      ))}
     </>
   );
 }

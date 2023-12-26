@@ -1,4 +1,6 @@
 import { Date } from "@/components/Date";
+import { HTMLRenderer } from "@/components/HTMLRenderer";
+import { Heading1 } from "@/components/Heading";
 
 import { getAllPostIds, getPostData } from "@/lib/helpers/posts";
 
@@ -29,16 +31,11 @@ const PostPage = async ({ params }: Props) => {
 
   return (
     <>
-      <h1>{postData.title}</h1>
-
+      <Heading1>{postData.title}</Heading1>
       <div>
         <Date dateString={postData.date} />
       </div>
-
-      <div
-        className="text-gray-600"
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
+      <HTMLRenderer htmlString={postData.contentHtml} />
     </>
   );
 };

@@ -5,7 +5,6 @@ import { Paragraph } from "@/components/Paragraph";
 import { PostCard } from "@/components/PostCard";
 import { Heading2 } from "@/components/Heading";
 import { PostWrapper } from "@/components/PostWrapper";
-import { StyledImage } from "./page-styles";
 
 export const metadata: Metadata = {
   title: "Next.js blog app with styled components",
@@ -24,32 +23,8 @@ export default function HomePage() {
 
   return (
     <>
-      <StyledImage
-        priority
-        src="/images/avatar-profile.jpg"
-        height={144}
-        width={144}
-        alt="avatar-profile-image"
-      />
-
-      <Paragraph>
-        Hello. I am software engineer at X company. I am passionate about
-        building scalable and maintainable software applications
-      </Paragraph>
-
-      <Paragraph>
-        This blog template is built using Next.js and is configured with support
-        of styled-components and markdown for a blog post.
-      </Paragraph>
-
-      {/* <div>
-        <Link href="/">View this project on github </Link>
-      </div> */}
-      <br />
-      <br />
-      <br />
-      <Heading2>Recent Blog Posts</Heading2>
-
+      <Heading2>Blog Posts</Heading2>
+      {/* Rendering List of posts */}
       {allPostsData.map((post) => (
         <PostWrapper key={post.id}>
           <PostCard {...post} />
