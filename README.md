@@ -19,11 +19,12 @@ Execute [create-next-app](https://github.com/vercel/next.js/tree/canary/packages
 
 ```bash
 npx create-next-app --example https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components my-blog
+```
 
-# or
+OR
 
+```bash
 git clone https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components.git my-blog
-
 ```
 
 Install `node_modules` and run dev server
