@@ -6,23 +6,22 @@
 
 This is a Blog starter kit built using [Next.js ](https://nextjs.org/) 14 (with [app router](https://nextjs.org/docs/app)), [styled-components](https://styled-components.com/) and typescript.
 
-## Demo
-
-See the template demo at https://nextjs-blog-styled-components.vercel.app/
+**Live Demo:** https://nextjs-blog-styled-components.vercel.app/
 
 ## Features
 
-- styled-components configuration with server-side rendering
+- [styled-components](https://styled-components.com/) configuration with server-side rendering
 - Data sourcing for a blog post through Markdown files
 - Styling through Reusable components
 - Typescript and Eslint configuration
+- Uses Next.js latest [App Router](https://nextjs.org/docs/app) paradigm
 
 ## How to use
 
-> [!NOTE]
-> This application requires Node.js v18.17+.
+> [!IMPORTANT]
+> This application requires **Node.js v18.17+.**
 
-### Installation & running project locally
+### Installation & running project
 
 Execute [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with npm or yarn to bootstrap this template or clone this repo:
 
