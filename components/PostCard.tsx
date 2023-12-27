@@ -19,7 +19,8 @@ const StyledLink = styled(Link)`
     flex-direction: column;
     border: 1px solid ${({ theme }) => theme.colors.lavenderMist};
 
-    & > span {
+    // Date component styling
+    & > time {
       color: ${({ theme }) => theme.colors.purpleHeart};
       font-size: 0.9rem;
       text-transform: uppercase;
@@ -32,16 +33,12 @@ const StyledLink = styled(Link)`
   }
 `;
 
-// const PostCardWrapper = styled.div`
-
 export const PostCard = ({ id, date, title }: PostCardProps) => {
   return (
     <StyledLink href={`/posts/${id}`}>
       <div>
         <Heading3>{title}</Heading3>
-        <span>
-          <Date dateString={date} />
-        </span>
+        <Date dateString={date} />
       </div>
     </StyledLink>
   );

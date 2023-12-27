@@ -1,9 +1,9 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getSortedPostsData } from "@/lib/helpers/posts";
-import { Paragraph } from "@/components/Paragraph";
+import { Copy } from "@/components/Copy";
 import { PostCard } from "@/components/PostCard";
-import { Heading2 } from "@/components/Heading";
+import { Heading1, Heading2 } from "@/components/Heading";
 import { PostWrapper } from "@/components/PostWrapper";
 import { StyledImage } from "../page-styles";
 
@@ -22,6 +22,7 @@ type PostData = {
 export default function AboutPage() {
   return (
     <>
+      <Heading1>About</Heading1>
       <StyledImage
         priority
         src="/images/avatar-profile.jpg"
@@ -30,15 +31,15 @@ export default function AboutPage() {
         alt="avatar-profile-image"
       />
 
-      <Paragraph>
+      <Copy>
         Hello. I am software engineer at X company. I am passionate about
         building scalable and maintainable software applications
-      </Paragraph>
+      </Copy>
 
-      <Paragraph>
+      <Copy>
         This blog template is built using Next.js and is configured with support
         of styled-components and markdown for a blog post.
-      </Paragraph>
+      </Copy>
     </>
   );
 }

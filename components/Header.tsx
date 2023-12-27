@@ -1,23 +1,35 @@
 "use client";
-
 import styled from "styled-components";
-import { Container } from "./Container";
+import { MaxWidthContainer } from "./Container";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const HeaderWrapper = styled.div`
-  background-color: #414141;
+  background-color: ${({ theme }) => theme.colors.tunaBlack};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.mabel};
   padding: 1.5rem 0;
+
+  @media screen and (max-width: 656px) {
+    padding: 1.5rem 1rem;
+  }
 `;
 
 const NavBar = styled.div`
   display: flex;
   justify-content: space-between;
+
+  & > a:hover,
+  & > a.active {
+    color: ${({ theme }) => theme.colors.blueGreen};
+  }
 `;
 
-const NavItem = styled.li`
-  & > a:hover {
+const NavItem = styled.li``;
+
+export const StyledLink = styled(Link)`
+  &:hover,
+  &.active {
     color: ${({ theme }) => theme.colors.blueGreen};
   }
 `;
@@ -29,24 +41,36 @@ const Nav = styled.ul`
   }
 `;
 
-const StyledHeading = styled.h1``;
-
 export const Header = () => {
+  const pathname = usePathname();
+
   return (
     <HeaderWrapper>
-      <Container>
+      <MaxWidthContainer>
         <NavBar>
-          <Link href="/">Your Name</Link>
+          <StyledLink href="/" className={pathname === "/" ? "active" : ""}>
+            YOUR NAME
+          </StyledLink>
           <Nav>
             <NavItem>
-              <Link href="/about">About</Link>
+              <StyledLink
+                href="/about"
+                className={pathname === "/about" ? "active" : ""}
+              >
+                About
+              </StyledLink>
             </NavItem>
             <NavItem>
-              <Link href="/posts">Posts</Link>
+              <StyledLink
+                href="/posts"
+                className={pathname === "/posts" ? "active" : ""}
+              >
+                Posts
+              </StyledLink>
             </NavItem>
           </Nav>
         </NavBar>
-      </Container>
+      </MaxWidthContainer>
     </HeaderWrapper>
   );
 };

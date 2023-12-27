@@ -1,11 +1,12 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { getSortedPostsData } from "@/lib/helpers/posts";
-import { Paragraph } from "@/components/Paragraph";
+import { Copy } from "@/components/Copy";
 import { PostCard } from "@/components/PostCard";
-import { Heading2 } from "@/components/Heading";
+import { Heading1, Heading2 } from "@/components/Heading";
 import { PostWrapper } from "@/components/PostWrapper";
 import { StyledImage } from "./page-styles";
+import { Spacer } from "@/components/Spacer";
+import { StyledLink } from "@/components/StyledLink";
 
 export const metadata: Metadata = {
   title: "Next.js blog app with styled components",
@@ -32,22 +33,19 @@ export default function HomePage() {
         alt="avatar-profile-image"
       />
 
-      <Paragraph>
+      <Copy>
         Hello. I am software engineer at X company. I am passionate about
         building scalable and maintainable software applications
-      </Paragraph>
+      </Copy>
 
-      <Paragraph>
-        This blog template is built using Next.js and is configured with support
-        of styled-components and markdown for a blog post.
-      </Paragraph>
+      <Copy>
+        This blog template is built using <strong>Next.js</strong> and is
+        configured with support of styled-components and markdown for a blog
+        post. <StyledLink href="/">View details on Docs</StyledLink>
+      </Copy>
 
-      {/* <div>
-        <Link href="/">View this project on github </Link>
-      </div> */}
-      <br />
-      <br />
-      <br />
+      <Spacer size={32} />
+
       <Heading2>Recent Blog Posts</Heading2>
 
       {allPostsData.map((post) => (

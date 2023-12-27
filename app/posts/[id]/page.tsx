@@ -32,9 +32,7 @@ const PostPage = async ({ params }: Props) => {
   return (
     <>
       <Heading1>{postData.title}</Heading1>
-      <div>
-        <Date dateString={postData.date} />
-      </div>
+      <Date dateString={postData.date} />
       <HTMLRenderer htmlString={postData.contentHtml} />
     </>
   );

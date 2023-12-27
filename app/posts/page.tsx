@@ -1,10 +1,8 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { getSortedPostsData } from "@/lib/helpers/posts";
-import { Paragraph } from "@/components/Paragraph";
 import { PostCard } from "@/components/PostCard";
 import { Heading2 } from "@/components/Heading";
-import { PostWrapper } from "@/components/PostWrapper";
+import { Spacer } from "@/components/Spacer";
 
 export const metadata: Metadata = {
   title: "Next.js blog app with styled components",
@@ -18,17 +16,19 @@ type PostData = {
   id: string;
 };
 
-export default function HomePage() {
-  const allPostsData: PostData[] = getSortedPostsData();
+export default function PostIndexPage() {
+  const allPosts: PostData[] = getSortedPostsData();
 
   return (
     <>
       <Heading2>Blog Posts</Heading2>
-      {/* Rendering List of posts */}
-      {allPostsData.map((post) => (
-        <PostWrapper key={post.id}>
+
+      {allPosts.map((post, index) => (
+        <div key={post.id}>
+          {/* Adding top space for blog post cards except for first one */}
+          {index > 0 && <Spacer size={24} />}
           <PostCard {...post} />
-        </PostWrapper>
+        </div>
       ))}
     </>
   );
