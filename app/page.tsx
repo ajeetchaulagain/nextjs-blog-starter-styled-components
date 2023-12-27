@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { getSortedPostsData } from "@/lib/helpers/posts";
 import { Copy } from "@/components/Copy";
-import { PostCard } from "@/components/PostCard";
+import { BlogPostCard } from "@/components/BlogPostCard";
 import { Heading2 } from "@/components/Heading";
-import { PostWrapper } from "@/components/PostWrapper";
 import { StyledImage } from "./page-styles";
 import { Spacer } from "@/components/Spacer";
 import { StyledLink } from "@/components/StyledLink";
@@ -37,23 +36,28 @@ export default function HomePage() {
 
       <Copy>
         Hello. I am software engineer at X company. I am passionate about
-        building scalable and maintainable software applications
+        building scalable and maintainable software applications.
       </Copy>
 
       <Copy>
-        This blog template is built using <strong>Next.js</strong> and is
-        configured with support of styled-components and markdown for a blog
-        post. <StyledLink href="/">View details on Docs</StyledLink>
+        This blog template is built using{" "}
+        <strong>Next.js, Typescript, styled-components</strong> and is
+        configured to render markdown blog posts post.{" "}
+        <StyledLink href="/">
+          See Github Repo of a project to learn more.
+        </StyledLink>
       </Copy>
 
       <Spacer size={32} />
 
       <Heading2>Recent Blog Posts</Heading2>
 
-      {allPostsData.map((post) => (
-        <PostWrapper key={post.id}>
-          <PostCard {...post} />
-        </PostWrapper>
+      {allPostsData.map((post, index) => (
+        <div key={post.id}>
+          {/* Adding top space for blog post cards except for first one */}
+          {index > 0 && <Spacer size={24} />}
+          <BlogPostCard {...post} />
+        </div>
       ))}
     </>
   );

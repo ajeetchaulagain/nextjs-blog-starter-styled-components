@@ -25,7 +25,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export const PostCard = ({ id, date, title }: PostCardProps) => {
+export const BlogPostCard = ({ id, date, title }: PostCardProps) => {
   return (
     <StyledLink href={`/posts/${id}`}>
       <div>
