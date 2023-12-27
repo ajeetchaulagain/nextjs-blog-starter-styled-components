@@ -18,16 +18,11 @@ const HeaderWrapper = styled.div`
 const NavBar = styled.div`
   display: flex;
   justify-content: space-between;
-
-  & > a:hover,
-  & > a.active {
-    color: ${({ theme }) => theme.colors.blueGreen};
-  }
 `;
 
 const NavItem = styled.li``;
 
-export const StyledLink = styled(Link)`
+export const StyledHeaderLink = styled(Link)`
   &:hover,
   &.active {
     color: ${({ theme }) => theme.colors.blueGreen};
@@ -48,25 +43,28 @@ export const Header = () => {
     <HeaderWrapper>
       <MaxWidthContainer>
         <NavBar>
-          <StyledLink href="/" className={pathname === "/" ? "active" : ""}>
+          <StyledHeaderLink
+            href="/"
+            className={pathname === "/" ? "active" : ""}
+          >
             YOUR NAME
-          </StyledLink>
+          </StyledHeaderLink>
           <Nav>
             <NavItem>
-              <StyledLink
+              <StyledHeaderLink
                 href="/about"
                 className={pathname === "/about" ? "active" : ""}
               >
                 About
-              </StyledLink>
+              </StyledHeaderLink>
             </NavItem>
             <NavItem>
-              <StyledLink
+              <StyledHeaderLink
                 href="/posts"
                 className={pathname === "/posts" ? "active" : ""}
               >
                 Posts
-              </StyledLink>
+              </StyledHeaderLink>
             </NavItem>
           </Nav>
         </NavBar>
