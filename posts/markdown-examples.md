@@ -1,5 +1,5 @@
 ---
-title: "Markdown Examples"
+title: "Markdown Rendering Examples"
 date: "2023-12-27"
 ---
 
