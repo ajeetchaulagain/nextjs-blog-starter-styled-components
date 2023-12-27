@@ -1,39 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=nextjs-blog-styled-components)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components/issues)
 
-##Screenshot
-![image](https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components/assets/6622655/fcde8421-9800-462b-8866-c31d71f87e8e)
+# Next.js Blog Starter Kit with styled-components
 
+This is a Blog starter kit built using [Next.js ](https://nextjs.org/) 14 (with [app router](https://nextjs.org/docs/app)), [styled-components](https://styled-components.com/) and typescript.
 
-## Getting Started
+**Live Demo:** https://nextjs-blog-styled-components.vercel.app/
 
-First, run the development server:
+## Features
+
+- [styled-components](https://styled-components.com/) configuration with server-side rendering
+- Data sourcing for a blog post through Markdown files
+- Styling through Reusable components
+- Typescript and Eslint configuration
+- Uses Next.js latest [App Router](https://nextjs.org/docs/app) paradigm
+
+## How to use
+
+> [!IMPORTANT]
+> This application requires **Node.js v18.17+.**
+
+### Installation & running project
+
+Execute [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with npm or yarn to bootstrap this template or clone this repo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx create-next-app --example https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components my-blog
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+OR
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+git clone https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components.git my-blog
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Install `node_modules` and run dev server:
 
-## Learn More
+```bash
+cd my-blog
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Your dev server should be up and running at [http://localhost:3000](http://localhost:3000)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Usage Guide/Note
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- To add a blog post, add the new markdown file in `/posts` directory
 
-## Deploy on Vercel
+  > **Note**: To create a blog post [remark](https://github.com/remarkjs/remark) and [remark-html](https://github.com/remarkjs/remark-html) is used to convert the markdown files into HTML string, which is then passed to page as the props. And for the metadata, [gray-matter](https://github.com/jonschlinkert/gray-matter) is used.
+
+- For styling markdown post, base styles are setup in `styles/MarkdownStyles.tsx`. For styling other pages, a minimal set of re-usable components created in this project are used.
+
+## Deployment
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
