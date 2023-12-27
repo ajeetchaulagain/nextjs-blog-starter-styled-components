@@ -1,34 +1,43 @@
-# Next.js Blog starter Kit with styled-components
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=nextjs-blog-styled-components)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components/issues)
 
-This is a Blog template built using [Next.js ](https://nextjs.org/) 14 (with [app router](https://nextjs.org/docs/app)), styled-components and typescript.
+# Next.js Blog Starter Kit with styled-components
+
+This is a Blog template built using [Next.js ](https://nextjs.org/) 14 (with [app router](https://nextjs.org/docs/app)), [styled-components](https://styled-components.com/) and typescript.
 
 ## Features
 
 - styled-components configuration with server-side rendering
 - Data sourcing for a blog post through Markdown files
 - Styling through Reusable components
-- Typescript and eslint configuration
-
-This example template sources the data for a blog from a Markdown files. The blog posts are stored in `posts` directory
+- Typescript and Eslint configuration
 
 ## How to use
 
-- Execute create-next-app with npm or yarn to bootstrap this template:
+1. Execute [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with npm or yarn to bootstrap this template or clone this repo:
 
-```bash
-npx create-next-app --example https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components my-blog
-cd my-blog
-npm i
-npm run dev
+   ```bash
+   npx create-next-app --example https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components my-blog
 
-```
+   # or
 
-> [!NOTE]
-> This application requires Node.js v18.17+.
+   git clone https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components.git my-blog
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Install `node_modules` and run dev server
+
+   ```bash
+   cd my-blog
+   npm install
+   npm run dev
+   ```
+
+   > [!NOTE]
+   > This application requires Node.js v18.17+.
+
+Your dev server should be up and running at [http://localhost:3000](http://localhost:3000)
 
 ## Resources
 
