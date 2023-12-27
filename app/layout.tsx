@@ -18,7 +18,7 @@ const theme = {
   colors: {
     purpleHeart: "#7334c5",
     mabel: "#d9f6fa",
-    blueGreen: "#3fc0e7",
+    blueGreen: "#49cff8",
     darkBlack: "##1a202c",
     tunaBlack: "#2d3748",
     lavenderMist: "#e2e8f0",
