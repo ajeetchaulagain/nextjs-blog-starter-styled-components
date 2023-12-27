@@ -15,24 +15,24 @@ This is a Blog template built using [Next.js ](https://nextjs.org/) 14 (with [ap
 
 ## How to use
 
-1. Execute [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with npm or yarn to bootstrap this template or clone this repo:
+Execute [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with npm or yarn to bootstrap this template or clone this repo:
 
-   ```bash
-   npx create-next-app --example https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components my-blog
+```bash
+npx create-next-app --example https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components my-blog
 
-   # or
+# or
 
-   git clone https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components.git my-blog
+git clone https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components.git my-blog
 
-   ```
+```
 
-2. Install `node_modules` and run dev server
+Install `node_modules` and run dev server
 
-   ```bash
-   cd my-blog
-   npm install
-   npm run dev
-   ```
+```bash
+cd my-blog
+npm install
+npm run dev
+```
 
 > [!NOTE]
 > This application requires Node.js v18.17+.
