@@ -3,8 +3,6 @@ title: "Markdown Rendering Examples"
 date: "2023-12-27"
 ---
 
-# Markdown Examples
-
 ## h2 Heading
 
 ### h3 Heading

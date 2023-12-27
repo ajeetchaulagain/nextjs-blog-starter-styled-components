@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getSortedPostsData } from "@/lib/helpers/posts";
 import { Copy } from "@/components/Copy";
 import { PostCard } from "@/components/PostCard";
-import { Heading1, Heading2 } from "@/components/Heading";
+import { Heading2 } from "@/components/Heading";
 import { PostWrapper } from "@/components/PostWrapper";
 import { StyledImage } from "./page-styles";
 import { Spacer } from "@/components/Spacer";
@@ -32,6 +32,8 @@ export default function HomePage() {
         width={144}
         alt="avatar-profile-image"
       />
+
+      <Spacer size={24} />
 
       <Copy>
         Hello. I am software engineer at X company. I am passionate about
