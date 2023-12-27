@@ -1,22 +1,13 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { getSortedPostsData } from "@/lib/helpers/posts";
 import { Copy } from "@/components/Copy";
-import { PostCard } from "@/components/PostCard";
-import { Heading1, Heading2 } from "@/components/Heading";
-import { PostWrapper } from "@/components/PostWrapper";
+import { Heading1 } from "@/components/Heading";
 import { StyledImage } from "../page-styles";
+import { Spacer } from "@/components/Spacer";
 
 export const metadata: Metadata = {
   title: "Next.js blog app with styled components",
   description:
     "A next.js blog starter created using app router and configured with styled-components and typescript",
-};
-
-type PostData = {
-  date: string;
-  title: string;
-  id: string;
 };
 
 export default function AboutPage() {
@@ -30,6 +21,8 @@ export default function AboutPage() {
         width={144}
         alt="avatar-profile-image"
       />
+
+      <Spacer size={24} />
 
       <Copy>
         Hello. I am software engineer at X company. I am passionate about

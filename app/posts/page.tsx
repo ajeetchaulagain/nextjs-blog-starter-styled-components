@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getSortedPostsData } from "@/lib/helpers/posts";
-import { PostCard } from "@/components/PostCard";
-import { Heading2 } from "@/components/Heading";
+import { BlogPostCard } from "@/components/BlogPostCard";
+import { Heading1 } from "@/components/Heading";
 import { Spacer } from "@/components/Spacer";
 
 export const metadata: Metadata = {
@@ -21,13 +21,13 @@ export default function PostIndexPage() {
 
   return (
     <>
-      <Heading2>Blog Posts</Heading2>
+      <Heading1>Blog Posts</Heading1>
 
       {allPosts.map((post, index) => (
         <div key={post.id}>
           {/* Adding top space for blog post cards except for first one */}
           {index > 0 && <Spacer size={24} />}
-          <PostCard {...post} />
+          <BlogPostCard {...post} />
         </div>
       ))}
     </>

@@ -18,14 +18,6 @@ const StyledLink = styled(Link)`
     display: flex;
     flex-direction: column;
     border: 1px solid ${({ theme }) => theme.colors.lavenderMist};
-
-    // Date component styling
-    & > time {
-      color: ${({ theme }) => theme.colors.purpleHeart};
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
   }
 
   & :hover {
@@ -33,7 +25,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export const PostCard = ({ id, date, title }: PostCardProps) => {
+export const BlogPostCard = ({ id, date, title }: PostCardProps) => {
   return (
     <StyledLink href={`/posts/${id}`}>
       <div>
