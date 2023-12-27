@@ -10,7 +10,7 @@ type PostCardProps = {
   id: string;
 };
 
-const StyledLink = styled(Link)`
+const StyledBlogCardLink = styled(Link)`
   & > div {
     border: 1px solid black;
     padding: 1.2rem 1rem;
@@ -27,11 +27,11 @@ const StyledLink = styled(Link)`
 
 export const BlogPostCard = ({ id, date, title }: PostCardProps) => {
   return (
-    <StyledLink href={`/posts/${id}`}>
+    <StyledBlogCardLink href={`/posts/${id}`}>
       <div>
         <Heading3>{title}</Heading3>
         <Date dateString={date} />
       </div>
-    </StyledLink>
+    </StyledBlogCardLink>
   );
 };
