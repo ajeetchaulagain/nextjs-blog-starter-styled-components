@@ -4,7 +4,7 @@
 
 # Next.js Blog Starter Kit with styled-components
 
-This is a Blog template built using [Next.js ](https://nextjs.org/) 14 (with [app router](https://nextjs.org/docs/app)), [styled-components](https://styled-components.com/) and typescript.
+This is a Blog starter kit built using [Next.js ](https://nextjs.org/) 14 (with [app router](https://nextjs.org/docs/app)), [styled-components](https://styled-components.com/) and typescript.
 
 ## Demo
 
@@ -36,7 +36,7 @@ OR
 git clone https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components.git my-blog
 ```
 
-Install `node_modules` and run dev server
+Install `node_modules` and run dev server:
 
 ```bash
 cd my-blog
@@ -50,8 +50,7 @@ Your dev server should be up and running at [http://localhost:3000](http://local
 
 - To add a blog post, add the new markdown file in `/posts` directory
 
-  > [!NOTE]
-  > To create a blog post [remark](https://github.com/remarkjs/remark) and [remark-html](https://github.com/remarkjs/remark-html) is used to convert the markdown files into HTML string, which is then passed to page as the props. And for the metadata, [gray-matter](https://github.com/jonschlinkert/gray-matter) is used
+  > **Note**: To create a blog post [remark](https://github.com/remarkjs/remark) and [remark-html](https://github.com/remarkjs/remark-html) is used to convert the markdown files into HTML string, which is then passed to page as the props. And for the metadata, [gray-matter](https://github.com/jonschlinkert/gray-matter) is used.
 
 - For styling markdown post, base styles are setup in `styles/MarkdownStyles.tsx`. For styling other pages, a minimal set of re-usable components created in this project are used.
 
