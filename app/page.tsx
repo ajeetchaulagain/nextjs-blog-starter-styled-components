@@ -42,10 +42,8 @@ export default function HomePage() {
       <Copy>
         This blog template is built using{" "}
         <strong>Next.js, Typescript, styled-components</strong> and is
-        configured to render markdown blog posts post.{" "}
-        <StyledLink href="/">
-          See Github Repo of a project to learn more.
-        </StyledLink>
+        configured to render markdown blog posts.{" "}
+        <StyledLink href="/">See Github repo to learn more.</StyledLink>
       </Copy>
 
       <Spacer size={32} />
