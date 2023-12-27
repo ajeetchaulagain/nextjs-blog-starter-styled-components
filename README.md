@@ -6,6 +6,10 @@
 
 This is a Blog template built using [Next.js ](https://nextjs.org/) 14 (with [app router](https://nextjs.org/docs/app)), [styled-components](https://styled-components.com/) and typescript.
 
+## Demo
+
+See the template demo at https://nextjs-blog-styled-components.vercel.app/
+
 ## Features
 
 - styled-components configuration with server-side rendering
@@ -14,6 +18,11 @@ This is a Blog template built using [Next.js ](https://nextjs.org/) 14 (with [ap
 - Typescript and Eslint configuration
 
 ## How to use
+
+> [!NOTE]
+> This application requires Node.js v18.17+.
+
+### Installation & running project locally
 
 Execute [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with npm or yarn to bootstrap this template or clone this repo:
 
@@ -35,19 +44,16 @@ npm install
 npm run dev
 ```
 
-> [!NOTE]
-> This application requires Node.js v18.17+.
-
 Your dev server should be up and running at [http://localhost:3000](http://localhost:3000)
 
-## Resources
+### Usage Guide/Note
 
-To learn more about Next.js, take a look at the following resources:
+- To add a blog post, add the new markdown file in `/posts` directory
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  > [!NOTE]
+  > To create a blog post [remark](https://github.com/remarkjs/remark) and [remark-html](https://github.com/remarkjs/remark-html) is used to convert the markdown files into HTML string, which is then passed to page as the props. And for the metadata, [gray-matter](https://github.com/jonschlinkert/gray-matter) is used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- For styling markdown post, base styles are setup in `styles/MarkdownStyles.tsx`. For styling other pages, a minimal set of re-usable components created in this project are used.
 
 ## Deployment
 
