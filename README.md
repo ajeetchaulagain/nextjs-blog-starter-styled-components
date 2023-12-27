@@ -34,8 +34,8 @@ This is a Blog template built using [Next.js ](https://nextjs.org/) 14 (with [ap
    npm run dev
    ```
 
-   > [!NOTE]
-   > This application requires Node.js v18.17+.
+> [!NOTE]
+> This application requires Node.js v18.17+.
 
 Your dev server should be up and running at [http://localhost:3000](http://localhost:3000)
 
