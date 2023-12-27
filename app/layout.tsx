@@ -1,10 +1,10 @@
 "use client";
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import { StyledComponentsRegistry } from "@/lib/registry";
 import React from "react";
 import { Header } from "@/components/Header";
 import { GlobalStyle } from "@/styles/GlobalStyles";
-import { Container, ContentWrapper } from "@/components/Container";
+import { MaxWidthContainer, ContentWrapper } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "styled-components";
 
@@ -34,9 +34,9 @@ const RootLayout = ({ children }: Props) => {
           <GlobalStyle />
           <ThemeProvider theme={theme}>
             <Header />
-            <Container>
+            <MaxWidthContainer>
               <ContentWrapper>{children}</ContentWrapper>
-            </Container>
+            </MaxWidthContainer>
             <Footer />
           </ThemeProvider>
         </StyledComponentsRegistry>

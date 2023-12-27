@@ -6,6 +6,5 @@ export const StyledImage = styled(Image)`
   border-radius: 9999px;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 2rem;
   display: block;
 `;
