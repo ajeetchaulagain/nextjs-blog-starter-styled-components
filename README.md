@@ -1,4 +1,4 @@
-![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=nextjs-blog-styled-components)
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=nextjs-blog-styled)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ajeetchaulagain/nextjs-blog-starter-styled-components/issues)
 
@@ -6,7 +6,7 @@
 
 This is a Blog starter kit built using [Next.js ](https://nextjs.org/) 14 (with [app router](https://nextjs.org/docs/app)), [styled-components](https://styled-components.com/) and typescript.
 
-**Live Demo:** https://nextjs-blog-styled-components.vercel.app/
+**Live Demo:** https://nextjs-blog-styled.vercel.app/
 
 ## Features
 
